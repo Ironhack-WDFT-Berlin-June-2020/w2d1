@@ -109,6 +109,7 @@ function addTodo() {
     const input = document.querySelector('input');
     // console.log(input.value);
     // don't use innerHTML here to prevent -> xss / html injection
+    // we could add that to the form if we use innerHTML: <img src='x' onerror='alert(1)'>
     // https://en.wikipedia.org/wiki/Cross-site_scripting
     newTodo.innerText = input.value;
     const parent = document.getElementById('todo-list');
